@@ -5,9 +5,9 @@ $user = "root";
 $password = "";
 $db = "crud_exemplo";
 
-$conn = mysqli_connect($hot, $user, $password, $db); // Erro: $hot ao invés de $host
+$conn = new mysql($hot, $user, $password, $db); // Erro: $hot ao invés de $host
 
-if (!$conn) {
-    echo "Falha na conexão!";
+if ($conn->connect_error) {  // Conexão insegura. 
+    echo "Falha na conexão!";  // Ao invés de de echo é melhor o Die.
 }
 ?>
