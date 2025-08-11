@@ -8,12 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // As aspas deveriam ser simples
 
     $sql = "INSERT INTO usuarios (nome, email) VALUES ('$nome', '$email')";
     $res = mysqli_query($conn, $sql);
-    if ($res) {  // A condiçaõ esta´incorreta, pois não esta conectando o banco de dados com nada.
+    if ($res) {  // A condição está incorreta, pois não esta conectando o banco de dados com nada.
         echo "Usuário cadastrado com sucesso!";
     else
         echo "Erro ao cadastrar!";
 }
-//Está faltando fechar a conecção entre o php e o banco de dados
+//Está faltando fechar a conexão entre o php e o banco de dados
 
 ?>
 
